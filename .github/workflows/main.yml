@@ -7,30 +7,40 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  build-deploy:
+    runs-on: ubuntu-18.04
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14.x
+    - name: setup node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
 
-      - name: Install NPM packages
-        run: yarn install --frozen-lockfile
+    - name: Cache dependencies
+      uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
 
-      - name: Build Next.js app
-        run: yarn build
-        env:
-          URL_PREFIX: random-button-webview
+    - name: install
+      run: yarn install --frozen-lockfile
 
-      - name: Export Next.js app
-        run: yarn export
+    - name: build
+      run: yarn build
+      env:
+          URL_PREFIX: myapp
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
+    - name: export
+      run: yarn export
+
+    - name: add nojekyll
+      run: touch ./out/.nojekyll
+
+    - name: deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./out
