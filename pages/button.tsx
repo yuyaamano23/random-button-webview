@@ -1,9 +1,12 @@
 import Link from "next/link";
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
+import { useRecoilState } from "recoil";
+import { countState } from "../atoms";
 import styles from "../styles/Button.module.css";
 
 const Button: FC = () => {
-	const [count, setCount] = useState<number>(0);
+	// recoil
+	const [count, setCount] = useRecoilState<number>(countState);
 	return (
 		<div className={styles.container}>
 			<div className={styles.main}>
