@@ -1,8 +1,9 @@
 import Link from "next/link";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import styles from "../styles/Button.module.css";
 
 const Button: FC = () => {
+	const [count, setCount] = useState<number>(0);
 	return (
 		<div className={styles.container}>
 			<div className={styles.main}>
