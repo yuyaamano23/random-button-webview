@@ -7,7 +7,13 @@ const Button: FC = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.main}>
-				<div className={styles.btnSquareShadow}>click!!!</div>
+				<h3>count : {count}</h3>
+				<div
+					className={styles.btnSquareShadow}
+					onClick={() => setCount(count + 1)}
+				>
+					click!!!
+				</div>
 				<div>buttonのページだお</div>
 				<Link href="/">
 					<a>To button page</a>
