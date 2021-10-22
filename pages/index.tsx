@@ -17,6 +17,7 @@ export default function Home() {
 			</Head>
 
 			<main className={styles.main}>
+				<h1>なちんごぽにぽにす!!</h1>
 				<h3>count : {count}</h3>
 				<Link href="/button">
 					<a>To button page</a>
