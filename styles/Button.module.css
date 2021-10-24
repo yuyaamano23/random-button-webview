@@ -1,25 +1,3 @@
-.btnSquareShadow {
-	display: inline-block;
-	text-decoration: none;
-	background: #ff8181;
-	color: #fff;
-	width: 120px;
-	height: 120px;
-	line-height: 120px;
-	border-radius: 50%;
-	text-align: center;
-	font-weight: bold;
-	overflow: hidden;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-	border-bottom: solid 3px #bd6565;
-}
-.btnSquareShadow:active {
-	-webkit-transform: translateY(2px);
-	transform: translateY(2px);
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-	border-bottom: none;
-}
-
 .container {
 	min-height: 100vh;
 	padding: 0 0.5rem;
@@ -44,4 +22,127 @@
 		width: 100%;
 		flex-direction: column;
 	}
+}
+
+a.btnEmergencyReal {
+	position: relative;
+	display: block;
+	width: 200px;
+	height: 130px;
+	margin: 0 auto;
+}
+
+a.btnEmergencyReal:hover .btnEmergencyRealTop {
+	top: 10px;
+	height: 50px;
+}
+
+a.btnEmergencyReal:active .btnEmergencyRealTop {
+	top: 20px;
+	height: 40px;
+}
+
+.btnEmergencyRealTop {
+	position: absolute;
+	top: 0;
+	left: 20px;
+	width: 160px;
+	height: 60px;
+	margin-top: 30px;
+	border-radius: 0 0 50% 50%;
+	background-image: -webkit-gradient(
+		linear,
+		right top,
+		left top,
+		from(#630909),
+		to(#d62d2d)
+	);
+	background-image: -webkit-linear-gradient(right, #630909 0%, #d62d2d 100%);
+	background-image: linear-gradient(to left, #630909 0%, #d62d2d 100%);
+	-webkit-box-shadow: inset 0 -1px 10px 0 rgba(0, 0, 0, 0.9),
+		0 5px 5px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 -1px 10px 0 rgba(0, 0, 0, 0.9),
+		0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btnEmergencyRealTop:before {
+	position: absolute;
+	top: -30px;
+	left: 0;
+	width: 160px;
+	height: 60px;
+	content: "";
+	border-radius: 80px / 30px;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		from(#6c0c0b),
+		to(#ed4c4c)
+	);
+	background-image: -webkit-linear-gradient(bottom, #6c0c0b 0%, #ed4c4c 100%);
+	background-image: linear-gradient(to top, #6c0c0b 0%, #ed4c4c 100%);
+	-webkit-box-shadow: 0 10px 28px 2px rgba(0, 0, 0, 0.2),
+		inset 0 5px 10px 0 rgba(0, 0, 0, 0.2),
+		inset 0 2px 1px 0 rgba(255, 255, 255, 0.6),
+		inset 0 -2px 1px 0 rgba(255, 255, 255, 0.1),
+		inset 0 -2px 10px 5px rgba(237, 76, 76, 0.6),
+		inset 5px 0 1px 1px rgba(255, 255, 255, 0.3);
+	box-shadow: 0 10px 28px 2px rgba(0, 0, 0, 0.2),
+		inset 0 5px 10px 0 rgba(0, 0, 0, 0.2),
+		inset 0 2px 1px 0 rgba(255, 255, 255, 0.6),
+		inset 0 -2px 1px 0 rgba(255, 255, 255, 0.1),
+		inset 0 -2px 10px 5px rgba(237, 76, 76, 0.6),
+		inset 5px 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.btnEmergencyRealTop span {
+	font-size: 38px;
+	font-weight: bold;
+
+	position: absolute;
+	top: -24px;
+	left: 0;
+
+	width: 100%;
+
+	-webkit-transform: scaleY(0.75);
+
+	transform: scaleY(0.75);
+	text-align: center;
+
+	color: #e48a8a;
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5),
+		1px 1px 5px rgba(255, 255, 255, 0.3);
+}
+
+.btnEmergencyRealBottom {
+	position: absolute;
+	top: 38px;
+	left: 0;
+	width: 200px;
+	height: 80px;
+	border-radius: 100px / 40px;
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		from(#f2f2f2),
+		color-stop(48%, #b4b4b4),
+		to(#767676)
+	);
+	background-image: -webkit-linear-gradient(
+		left,
+		#f2f2f2 0%,
+		#b4b4b4 48%,
+		#767676 100%
+	);
+	background-image: linear-gradient(
+		to right,
+		#f2f2f2 0%,
+		#b4b4b4 48%,
+		#767676 100%
+	);
+	-webkit-box-shadow: 0 8px 0 #c4cacc, inset 1px -1px 10px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 8px 0 #c4cacc, inset 1px -1px 10px 0 rgba(0, 0, 0, 0.2);
 }
