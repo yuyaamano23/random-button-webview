@@ -52,7 +52,7 @@
 	border-bottom: none; /*線を消す*/
 }
 /* ====================== */
-a.btnEmergencyReal {
+div.btnEmergencyReal {
 	position: relative;
 	display: block;
 	width: 200px;
@@ -60,12 +60,12 @@ a.btnEmergencyReal {
 	margin: 0 auto;
 }
 
-a.btnEmergencyReal:hover .btnEmergencyRealTop {
+div.btnEmergencyReal:hover .btnEmergencyRealTop {
 	top: 10px;
 	height: 50px;
 }
 
-a.btnEmergencyReal:active .btnEmergencyRealTop {
+div.btnEmergencyReal:active .btnEmergencyRealTop {
 	top: 20px;
 	height: 40px;
 }

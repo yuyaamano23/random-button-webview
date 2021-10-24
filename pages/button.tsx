@@ -35,7 +35,7 @@ const Button: FC = () => {
 						<h1>
 							<span className={styles.countNum}>{count}</span>回
 						</h1>
-						<a
+						<div
 							className={styles.btnEmergencyReal}
 							onClick={() => {
 								setCount(count + 1);
@@ -45,7 +45,7 @@ const Button: FC = () => {
 							<span className={styles.btnEmergencyRealTop}>
 								<span>押す</span>
 							</span>
-						</a>
+						</div>
 					</>
 				)}
 				<Link href="/">
