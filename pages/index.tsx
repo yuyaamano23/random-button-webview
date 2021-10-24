@@ -8,6 +8,17 @@ import { countState } from "../atoms";
 export default function Home() {
 	// recoil
 	const count = useRecoilValue<number>(countState);
+	// useEffectで初回起動時のみclassを付与してスプラッシュを実現させたい
+	// useEffect(
+	// 	() => {
+	// 		// 初回レンダリング後に実行されるため、
+	// 		// refは今このタイミングで設定される
+	// 		console.log("render");
+	// 		// inputRef.current.focus();
+	// 	},
+	// 	// 副作用はinputRefに依存する
+	// 	[inputRef]
+	// );
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -17,7 +28,6 @@ export default function Home() {
 			</Head>
 
 			<main className={styles.main}>
-				<h1>なちんごぽにぽにす!!</h1>
 				<h3>count : {count}</h3>
 				<Link href="/button">
 					<a>To button page</a>
