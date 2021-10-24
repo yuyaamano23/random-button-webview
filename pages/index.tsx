@@ -24,18 +24,17 @@ export default function Home() {
 			</Head>
 
 			<main className={styles.main}>
-				<Link href="/button">
-					<a>a</a>
-				</Link>
-				<div className={`${styles.btnSwitch} ${styles.btnSwitchWrap}`}>
-					<input type="checkbox" id="onoff" name="onoff" />
-					<div className={styles.btnSwitchBg}>
-						<label className={styles.btnSwitchIn} htmlFor="onoff">
-							<span className={styles.on}>ON</span>
-							<span className={styles.off}>OFF</span>
-						</label>
+				<Link href="/button" passHref>
+					<div className={`${styles.btnSwitch} ${styles.btnSwitchWrap}`}>
+						<input type="checkbox" id="onoff" name="onoff" />
+						<div className={styles.btnSwitchBg}>
+							<label className={styles.btnSwitchIn} htmlFor="onoff">
+								<span className={styles.on}>はじめる</span>
+								<span className={styles.off}>終わる</span>
+							</label>
+						</div>
 					</div>
-				</div>
+				</Link>
 			</main>
 		</div>
 	);
