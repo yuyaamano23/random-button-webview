@@ -2,12 +2,8 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Link from "next/link";
 import React from "react";
-import { useRecoilValue } from "recoil";
-import { countState } from "../atoms";
 
 export default function Home() {
-	// recoil
-	const count = useRecoilValue<number>(countState);
 	// useEffectで初回起動時のみclassを付与してスプラッシュを実現させたい
 	// useEffect(
 	// 	() => {
@@ -28,7 +24,6 @@ export default function Home() {
 			</Head>
 
 			<main className={styles.main}>
-				<h3>count : {count}</h3>
 				<Link href="/button">
 					<a>To button page</a>
 				</Link>
