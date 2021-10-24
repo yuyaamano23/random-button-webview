@@ -35,6 +35,12 @@ export default function Home() {
 						</div>
 					</div>
 				</Link>
+				<div>
+					<p>*注意*</p>
+					<p>
+						本アプリはいじめや暴力を推奨するものではありません。本アプリによって及ぼされる結果はご利用者様の責任とみなされます。
+					</p>
+				</div>
 			</main>
 		</div>
 	);
