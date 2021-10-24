@@ -11,7 +11,7 @@ const Button: FC = () => {
 	// recoil
 	const [count, setCount] = useRecoilState<number>(countState);
 	useEffect(() => {
-		setRandnum(1 + Math.floor(Math.random() * 30));
+		setRandnum(1 + Math.floor(Math.random() * 3));
 	}, []);
 	return (
 		<div className={styles.container}>
@@ -19,14 +19,16 @@ const Button: FC = () => {
 				{randnum == count ? (
 					<>
 						<h1>Bomb!!!!</h1>
-						<div
+						<a
+							href=""
 							onClick={() => {
 								Router.reload();
 							}}
+							className={styles.btnSquare}
 						>
-							<AiOutlineReload />
-							もういちど
-						</div>
+							<AiOutlineReload size={35} />
+							もう一度
+						</a>
 					</>
 				) : (
 					<>
@@ -44,7 +46,6 @@ const Button: FC = () => {
 						</a>
 					</>
 				)}
-				<div>buttonのページだお</div>
 				<Link href="/">
 					<a>To main page</a>
 				</Link>
