@@ -11,7 +11,7 @@ const Button: FC = () => {
 	// recoil
 	const [count, setCount] = useRecoilState<number>(countState);
 	useEffect(() => {
-		setRandnum(1 + Math.floor(Math.random() * 3));
+		setRandnum(1 + Math.floor(Math.random() * 10));
 	}, []);
 	return (
 		<div className={styles.container}>
@@ -32,7 +32,9 @@ const Button: FC = () => {
 					</>
 				) : (
 					<>
-						<h3>count : {count}</h3>
+						<h1>
+							<span className={styles.countNum}>{count}</span>回
+						</h1>
 						<a
 							className={styles.btnEmergencyReal}
 							onClick={() => {

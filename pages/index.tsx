@@ -30,7 +30,7 @@ export default function Home() {
 						<div className={styles.btnSwitchBg}>
 							<label className={styles.btnSwitchIn} htmlFor="onoff">
 								<span className={styles.on}>はじめる</span>
-								<span className={styles.off}>終わる</span>
+								<span className={styles.off}>辞めたい</span>
 							</label>
 						</div>
 					</div>

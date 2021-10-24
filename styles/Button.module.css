@@ -24,6 +24,10 @@
 	}
 }
 
+.countNum {
+	font-size: 90px;
+}
+
 /* ============================ */
 /* もういちどぼたん */
 
@@ -31,10 +35,10 @@
 	display: inline-block;
 	padding: 0.5em 0.8em 0.5em 0.5em;
 	text-decoration: none;
-	background: #668ad8; /*ボタン色*/
+	background: #db4105; /*ボタン色*/
 	color: #fff;
-	border-bottom: solid 4px #627295;
-	border-radius: 3px;
+	border-bottom: solid 4px #832d0b;
+	border-radius: 5px;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
