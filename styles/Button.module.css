@@ -43,6 +43,8 @@
 	justify-content: flex-start;
 	align-items: center;
 	font-size: 1.5em;
+	user-select: none;
+	outline: none;
 }
 
 .btnSquare:active {
@@ -50,6 +52,8 @@
 	-webkit-transform: translateY(4px);
 	transform: translateY(4px); /*下に動く*/
 	border-bottom: none; /*線を消す*/
+	user-select: none;
+	outline: none;
 }
 /* ====================== */
 div.btnEmergencyReal {
@@ -58,16 +62,21 @@ div.btnEmergencyReal {
 	width: 200px;
 	height: 130px;
 	margin: 0 auto;
+	user-select: none;
+	outline: none;
 }
 
 div.btnEmergencyReal:hover .btnEmergencyRealTop {
 	top: 10px;
 	height: 50px;
+	user-select: none;
+	outline: none;
 }
 
 div.btnEmergencyReal:active .btnEmergencyRealTop {
 	top: 20px;
 	height: 40px;
+	user-select: none;
 }
 
 .btnEmergencyRealTop {
