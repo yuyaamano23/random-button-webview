@@ -25,8 +25,17 @@ export default function Home() {
 
 			<main className={styles.main}>
 				<Link href="/button">
-					<a>To button page</a>
+					<a>a</a>
 				</Link>
+				<div className={`${styles.btnSwitch} ${styles.btnSwitchWrap}`}>
+					<input type="checkbox" id="onoff" name="onoff" />
+					<div className={styles.btnSwitchBg}>
+						<label className={styles.btnSwitchIn} htmlFor="onoff">
+							<span className={styles.on}>ON</span>
+							<span className={styles.off}>OFF</span>
+						</label>
+					</div>
+				</div>
 			</main>
 		</div>
 	);
